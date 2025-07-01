@@ -6,12 +6,17 @@ This is a React app built using modern technologies and interface development ap
 
 ## Technologies
 
-- **React** + **TypeScript (TSX)**
-- **React Router**
-- **SCSS Modules**
-- **Vite** as the builder
-- **IntersectionObserver API**
-- **SwiperJS** (basic experience)
+- **HTML5** — modern semantic markup
+- **SCSS Modules** — scoped and modular styling
+- **React** + **TypeScript (TSX)** — component-based architecture with strict typing
+- **React Router** — client-side routing
+- **Vite** — fast bundler and dev server
+- **IntersectionObserver API** — tracking elements in the viewport (used for lazy loading, active states, etc.)
+- **SwiperJS** — basic usage of sliders/carousels
+- **Fetch API** — asynchronous HTTP requests to the server
+- **localStorage** — persistent storage for user state (e.g., cart, favorites)
+- **Responsive Design** — adaptability for different screen sizes
+- **Git + GitHub** — version control and deployment
 
 ## Main Project Structure
 
