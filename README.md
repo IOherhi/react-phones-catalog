@@ -55,3 +55,5 @@ This is a React app built using modern technologies and interface development ap
 - Fully functional **dots navigation** under the main slider on the Home page
 - Components are reused across different pages
 - Filtering and sorting work through URLSearchParams.
+
+![alt text](image.png)

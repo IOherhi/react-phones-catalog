@@ -13,17 +13,17 @@ export const Menu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav__list-item" to="phones">
+            <NavLink className="nav__list-item" to="/phones">
               Phones
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav__list-item" to="tablets">
+            <NavLink className="nav__list-item" to="/tablets">
               tablets
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav__list-item" to="accessories">
+            <NavLink className="nav__list-item" to="/accessories">
               accessories
             </NavLink>
           </li>
