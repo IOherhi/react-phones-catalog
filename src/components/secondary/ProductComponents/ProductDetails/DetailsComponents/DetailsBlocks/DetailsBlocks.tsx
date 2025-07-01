@@ -15,6 +15,7 @@ interface Props {
   activeColor: string;
   elementsCart: Product[] | [];
   newProduct: Product | null;
+  allStore: Product[][];
   activeCapacity: string;
   setElementsCart: React.Dispatch<React.SetStateAction<Product[]>>;
   setPhonesStorge: React.Dispatch<React.SetStateAction<Product[]>>;
@@ -27,6 +28,7 @@ export const DeatailsIamges: React.FC<Props> = ({
   phonesStorge,
   setCapacity,
   elementsCart,
+  allStore,
   newProduct,
   activeCapacity,
   setElementsCart,
@@ -50,6 +52,26 @@ export const DeatailsIamges: React.FC<Props> = ({
 
     return true;
   }, [newProduct, elementsCart]);
+
+  const price = useMemo(() => {
+    const store = allStore.find(store => {
+      return store.find(
+        obj =>
+          obj.category === product.category && obj.capacity === activeCapacity,
+      );
+    });
+
+    const obj = store?.find(obj => {
+      return (
+        obj.category === product.category && obj.capacity === activeCapacity
+      );
+    });
+
+    return {
+      priceRegular: obj?.priceRegular,
+      priceDiscount: obj?.priceDiscount,
+    };
+  }, [activeCapacity, allStore]);
 
   return (
     <div className="product-details__blocks">
@@ -111,12 +133,10 @@ export const DeatailsIamges: React.FC<Props> = ({
 
       <div className="product-price">
         <div className="product-price__prices">
-          <p className="product-price__prices-regular">
-            ${product.priceRegular}
-          </p>
+          <p className="product-price__prices-regular">${price.priceRegular}</p>
 
           <p className="product-price__prices-discount">
-            ${product.priceDiscount}
+            ${price.priceDiscount}
           </p>
         </div>
 

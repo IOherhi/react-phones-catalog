@@ -17,13 +17,13 @@ export const PagesList: React.FC<Props> = ({ renderList }) => {
   let isFrom = '';
 
   switch (pathname) {
-    case 'phones':
+    case '/phones':
       isFrom = 'Phones';
       break;
-    case 'accessories':
+    case '/accessories':
       isFrom = 'Accessories';
       break;
-    case 'tablets':
+    case '/tablets':
       isFrom = 'Tablets';
       break;
   }

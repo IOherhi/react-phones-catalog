@@ -1,15 +1,16 @@
+import { normalizeColor } from '../../../../utils/normalizeColors';
+import { DeatailsIamges } from './DetailsComponents/DetailsBlocks';
 import { Product } from '../../../../types/Product';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './ProductDetails.scss';
-import { DeatailsIamges } from './DetailsComponents/DetailsBlocks';
-import { normalizeColor } from '../../../../utils/normalizeColors';
 
 interface Props {
   product: Product | null;
+  allStore: Product[][];
 }
 
-export const ProductDetails: React.FC<Props> = ({ product }) => {
+export const ProductDetails: React.FC<Props> = ({ allStore, product }) => {
   const [activeColor, setActiveColor] = useState<string>('');
   const [activeCapacity, setActiveCapacity] = useState<string>('');
   const [primaryImg, setPrimaryImg] = useState<string | null>(null);
@@ -104,6 +105,15 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
 
   const setCapacity = (ram: string) => {
     const updatedName = product.name.replace(activeCapacity, ram);
+    const store = allStore.find(store => {
+      return store.find(
+        obj => obj.category === product.category && obj.capacity === ram,
+      );
+    });
+
+    const obj = store?.find(obj => {
+      return obj.category === product.category && obj.capacity === ram;
+    });
 
     setNewProduct(prev => {
       if (!prev) {
@@ -114,6 +124,7 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
         ...prev,
         capacity: ram,
         name: updatedName,
+        priceRegular: obj?.priceRegular ?? 0,
       };
     });
 
@@ -159,6 +170,7 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
 
         <DeatailsIamges
           product={product}
+          allStore={allStore}
           phonesStorge={phonesStorge}
           setCapacity={setCapacity}
           changeColor={changeColor}

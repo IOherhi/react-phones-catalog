@@ -54,7 +54,7 @@ export const ProductPage = () => {
         <div className="product">
           <ProductTop product={product} />
 
-          <ProductDetails product={product} />
+          <ProductDetails allStore={allStore} product={product} />
 
           <AboutUs product={product} />
 
