@@ -104,34 +104,33 @@ export const ProductDetails: React.FC<Props> = ({ allStore, product }) => {
   };
 
   const setCapacity = (ram: string) => {
-  const updatedName = product.name.replace(activeCapacity, ram);
+    const updatedName = product.name.replace(activeCapacity, ram);
 
-  const foundStore = allStore.find(storeArray => {
-    return storeArray.find(
-      item => item.category === product.category && item.capacity === ram,
-    );
-  });
+    const foundStore = allStore.find(storeArray => {
+      return storeArray.find(
+        item => item.category === product.category && item.capacity === ram,
+      );
+    });
 
-  const foundObj = foundStore?.find(item => {
-    return item.category === product.category && item.capacity === ram;
-  });
+    const foundObj = foundStore?.find(item => {
+      return item.category === product.category && item.capacity === ram;
+    });
 
-  setNewProduct(prev => {
-    if (!prev) {
-      return null;
-    }
+    setNewProduct(prev => {
+      if (!prev) {
+        return null;
+      }
 
-    return {
-      ...prev,
-      capacity: ram,
-      name: updatedName,
-      priceRegular: foundObj?.priceRegular ?? 0,
-    };
-  });
+      return {
+        ...prev,
+        capacity: ram,
+        name: updatedName,
+        priceRegular: foundObj?.priceRegular ?? 0,
+      };
+    });
 
-  setActiveCapacity(ram);
-};
-
+    setActiveCapacity(ram);
+  };
 
   return (
     <article className="product-details">
