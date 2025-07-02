@@ -175,7 +175,7 @@ export const TopBar = () => {
               >
                 <img
                   className="top-bar__nav-secondary-img"
-                  src="/icons/menu-icon.svg"
+                  src={`${import.meta.env.BASE_URL}icons/menu-icon.svg`}
                   alt="Icon Menu"
                 />
               </NavLink>
