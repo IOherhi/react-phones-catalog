@@ -1,6 +1,6 @@
 # Phone Catalog App
 
-# [Demo](https://react-phone-catalog-b5y6.vercel.app)
+# [Demo](https://react-phone-catalog-b5y6.react-phones-catalog.app)
 
 This is a React app built using modern technologies and interface development approaches.
 
