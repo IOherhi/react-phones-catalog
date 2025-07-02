@@ -51,7 +51,7 @@ export const TopBar = () => {
   return (
     <div id="topBar" className="top-bar">
       <div className="top-bar__logo">
-        <img src="../../icons/logo.svg" alt="Logo Img" />
+        <img src="icons/logo.svg" alt="Logo Img" />
       </div>
 
       <nav className="top-bar__nav">
@@ -119,7 +119,7 @@ export const TopBar = () => {
             >
               <img
                 className="top-bar__nav-secondary-img"
-                src="../../icons/favourites-icon.svg"
+                src="icons/favourites-icon.svg"
                 alt="Icon favourites"
               />
 
@@ -140,7 +140,7 @@ export const TopBar = () => {
             >
               <img
                 className="top-bar__nav-secondary-img"
-                src="../../icons/cart-icon.svg"
+                src="icons/cart-icon.svg"
                 alt="Icon favourites"
               />
 
@@ -160,7 +160,7 @@ export const TopBar = () => {
               >
                 <img
                   className="top-bar__nav-secondary-img"
-                  src="../../icons/Close.svg"
+                  src="icons/Close.svg"
                   alt="Icon Menu"
                 />
               </button>

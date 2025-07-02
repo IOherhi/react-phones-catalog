@@ -43,7 +43,7 @@ export const Menu = () => {
             >
               <img
                 className="top-bar__nav-secondary-img"
-                src="../../icons/favourites-icon.svg"
+                src="icons/favourites-icon.svg"
                 alt="Icon favourites"
               />
             </NavLink>
@@ -60,7 +60,7 @@ export const Menu = () => {
             >
               <img
                 className="top-bar__nav-secondary-img"
-                src="../../icons/cart-icon.svg"
+                src="icons/cart-icon.svg"
                 alt="Icon favourites"
               />
             </NavLink>

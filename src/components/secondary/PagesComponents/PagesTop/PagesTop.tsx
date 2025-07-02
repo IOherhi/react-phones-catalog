@@ -28,7 +28,7 @@ export const PagesTop: React.FC<Props> = ({
         <ul className="PagesTop__breadcrumb">
           <li>
             <Link className="PagesTop__breadcrumb-icon" to="/">
-              <img src="/icons/icon-house.svg" alt="Icon House" />
+              <img src="icons/icon-house.svg" alt="Icon House" />
             </Link>
           </li>
 
