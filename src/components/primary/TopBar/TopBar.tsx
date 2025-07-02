@@ -34,14 +34,16 @@ export const TopBar = () => {
       if (key === 'cart') {
         const value: Product[] = JSON.parse(localStorage.getItem(key) || '[]');
 
-        setCartContent([...value]);
+        setCartContent(Array.isArray(value) ? [...value] : []);
         continue;
       }
 
       if (key !== null) {
         const value: Product[] = JSON.parse(localStorage.getItem(key) || '[]');
 
-        storge.push(...value);
+        if (Array.isArray(value)) {
+          storge.push(...value);
+        }
       }
     }
 
