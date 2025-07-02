@@ -1,5 +1,5 @@
 import { ProductPage } from './components/primary/ProductPage/ProductPage';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { HomeContent } from './components/primary/HomeContent';
 import { MainLayout } from './components/primary/MainLayout';
 import { Favourites } from './components/primary/Favourites';
@@ -8,7 +8,7 @@ import { Menu } from './components/secondary/Menu';
 import { Cart } from './components/primary/Cart';
 
 export const Root = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route path="product/:productId" element={<ProductPage />} />
@@ -23,5 +23,5 @@ export const Root = () => (
 
       <Route path="*" element={<p>Page is not found</p>} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
