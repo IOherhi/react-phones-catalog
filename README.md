@@ -1,6 +1,6 @@
 # Phone Catalog App
 
-# [Demo](https://react-phone-catalog-b5y6.react-phones-catalog.app)
+# [Demo](https://IOherhi.github.io/react-phones-catalog)
 
 This is a React app built using modern technologies and interface development approaches.
 
