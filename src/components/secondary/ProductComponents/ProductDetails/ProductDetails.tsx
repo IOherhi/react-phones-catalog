@@ -104,39 +104,41 @@ export const ProductDetails: React.FC<Props> = ({ allStore, product }) => {
   };
 
   const setCapacity = (ram: string) => {
-    const updatedName = product.name.replace(activeCapacity, ram);
-    const store = allStore.find(store => {
-      return store.find(
-        obj => obj.category === product.category && obj.capacity === ram,
-      );
-    });
+  const updatedName = product.name.replace(activeCapacity, ram);
 
-    const obj = store?.find(obj => {
-      return obj.category === product.category && obj.capacity === ram;
-    });
+  const foundStore = allStore.find(storeArray => {
+    return storeArray.find(
+      item => item.category === product.category && item.capacity === ram,
+    );
+  });
 
-    setNewProduct(prev => {
-      if (!prev) {
-        return null;
-      }
+  const foundObj = foundStore?.find(item => {
+    return item.category === product.category && item.capacity === ram;
+  });
 
-      return {
-        ...prev,
-        capacity: ram,
-        name: updatedName,
-        priceRegular: obj?.priceRegular ?? 0,
-      };
-    });
+  setNewProduct(prev => {
+    if (!prev) {
+      return null;
+    }
 
-    setActiveCapacity(ram);
-  };
+    return {
+      ...prev,
+      capacity: ram,
+      name: updatedName,
+      priceRegular: foundObj?.priceRegular ?? 0,
+    };
+  });
+
+  setActiveCapacity(ram);
+};
+
 
   return (
     <article className="product-details">
       <div className="product-details-content">
         <div className="product-details__images">
           <img
-            src={`/${primaryImg}`}
+            src={`${primaryImg}`}
             alt="Primary-img"
             className="product-details__images-primary"
           />
@@ -158,7 +160,7 @@ export const ProductDetails: React.FC<Props> = ({ allStore, product }) => {
                   onClick={() => setPrimaryImg(imgSrc)}
                 >
                   <img
-                    src={`/${imgSrc}`}
+                    src={imgSrc}
                     alt="list-img"
                     className="product-details__images-list-item-img"
                   />

@@ -98,7 +98,7 @@ export const Cart = () => {
 
                       <Link state={{ from: 'Cart' }} to={`/product/${el.name}`}>
                         <img
-                          src={`/${el.images[0]}`}
+                          src={el.images[0]}
                           className="list__element-top-img"
                         />
                       </Link>
