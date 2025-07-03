@@ -1,6 +1,6 @@
-# Phone Catalog App
+# Gadget Store App
 
-# [Demo](https://IOherhi.github.io/react-phones-catalog)
+# [Demo](https://IOherhi.github.io/gadget-store)
 
 This is a React app built using modern technologies and interface development approaches.
 
