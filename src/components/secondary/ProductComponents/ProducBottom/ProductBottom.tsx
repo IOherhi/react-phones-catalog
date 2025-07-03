@@ -113,7 +113,7 @@ export const ProductBottom: React.FC<Props> = ({ product, allStore }) => {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="card__content-img"
-                      src={`/${p.images[0]}`}
+                      src={`${p.images[0]}`}
                       alt="Phone-img"
                     />
                   </Link>

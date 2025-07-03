@@ -57,7 +57,7 @@ export const Favourites = () => {
                         >
                           <img
                             className="card__content-img"
-                            src={`/${el.images[0]}`}
+                            src={`${el.images[0]}`}
                             alt="Phone-img"
                           />
                         </Link>
